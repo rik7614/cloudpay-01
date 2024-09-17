@@ -160,7 +160,6 @@ resource "aws_route_table_association" "public_subnet_association" {
 }
 
 
-
 #S3 Bucket for state file
 resource "aws_s3_bucket" "terraform_state" {
   bucket = "my-terraform-state-bucket-cloudpay"
@@ -220,7 +219,7 @@ resource "aws_instance" "web_instance" {
               yum install -y httpd
               systemctl start httpd
               systemctl enable httpd
-              echo "Hello, Terraform!" > /var/www/html/index.html
+              echo "Hello, Cloudpay!" > /var/www/html/index.html
             EOF
 }
 
